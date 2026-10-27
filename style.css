@@ -22,7 +22,7 @@
 
 
 
-\* {
+* {
 
     margin: 0;
 
@@ -1709,11 +1709,11 @@ a {
 
 
 
-    \*,
+    *,
 
-    \*::before,
+    *::before,
 
-    \*::after {
+    *::after {
 
         animation-duration: 0.01ms !important;
 
@@ -1729,13 +1729,16 @@ a {
 
 
 .contact-form {
-    width: min(100%, 680px);
+    width: 70%;
+    max-width: 520px;
+    min-width: 0;
     margin: 28px auto;
     padding: 24px;
     text-align: left;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 18px;
+    box-sizing: border-box;
 }
 
 .contact-form .form-group {
@@ -1753,6 +1756,8 @@ a {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 12px 14px;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -1777,14 +1782,6 @@ a {
     cursor: pointer;
     font: inherit;
 }
-
-@media (max-width: 560px) {
-    .contact-form {
-        padding: 18px;
-    }
-}
-
-
 
 .menu-checkbox,
 .menu-icon {
@@ -1835,17 +1832,6 @@ a {
         pointer-events: none;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 18px;
-        padding: 20px 0;
-        background: var(--bg-deep);
-        border-top: 1px solid var(--border);
-    }
-
     .menu-checkbox:checked~.nav-links {
         display: flex;
     }
@@ -1869,22 +1855,22 @@ a {
 }
 
 
+/* Contact form responsive sizing */
 .contact-card {
     width: 100%;
-    max-width: 100%;
+    max-width: 800px;
     min-width: 0;
+    margin-inline: auto;
 }
 
-.contact-form {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
+.contact-card > p:not(.section-label) {
+    max-width: 550px;
+    margin: 0 auto 28px;
+    color: var(--muted);
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
@@ -1892,11 +1878,15 @@ a {
 
 @media (max-width: 560px) {
     .contact-card {
+        width: 100%;
+        max-width: 100%;
         padding-inline: 0;
     }
 
     .contact-form {
-        margin-inline: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 28px auto;
         padding: 18px;
     }
 
@@ -1906,7 +1896,8 @@ a {
     }
 
     .contact-card a,
-    .contact-card p {
+    .contact-card p,
+    .contact-form * {
         overflow-wrap: anywhere;
     }
 }
