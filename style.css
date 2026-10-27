@@ -1617,12 +1617,18 @@ a {
 
 
 
+
+
     .skills-grid {
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 16px;
-
     }
+
+    .skill-card.span-2 {
+        grid-column: span 1;
+    }
+
+
 
 
 
@@ -1779,7 +1785,7 @@ a {
 }
 
 
-/* Mobile navigation */
+
 .menu-checkbox,
 .menu-icon {
     display: none;
@@ -1862,7 +1868,7 @@ a {
     }
 }
 
-/* Fix contact form on mobile */
+
 .contact-card {
     width: 100%;
     max-width: 100%;
