@@ -1863,7 +1863,7 @@ a {
     margin-inline: auto;
 }
 
-.contact-card > p:not(.section-label) {
+.contact-card>p:not(.section-label) {
     max-width: 550px;
     margin: 0 auto 28px;
     color: var(--muted);
