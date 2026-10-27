@@ -1861,3 +1861,46 @@ a {
         overflow-wrap: anywhere;
     }
 }
+
+/* Fix contact form on mobile */
+.contact-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 560px) {
+    .contact-card {
+        padding-inline: 0;
+    }
+
+    .contact-form {
+        margin-inline: 0;
+        padding: 18px;
+    }
+
+    .contact-form button {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .contact-card a,
+    .contact-card p {
+        overflow-wrap: anywhere;
+    }
+}
