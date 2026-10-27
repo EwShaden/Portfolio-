@@ -222,7 +222,7 @@ a {
 
     align-items: center;
 
-    padding: 85px 0 100px;
+    padding: 20px 0 100px;
 
     background:
 
@@ -292,11 +292,11 @@ a {
 
     margin-bottom: 35px;
 
-    border: 1px solid #63744a;
+
 
     border-radius: 50px;
 
-    background: #33432a80;
+
 
     color: var(--green-light);
 
@@ -638,7 +638,7 @@ a {
 
 
 
-/\* Background grid dots matching photo \*/ .section-darker {
+.section-darker {
 
     background-color: #121f11;
 
@@ -731,7 +731,7 @@ a {
 
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 20px;
 
@@ -747,7 +747,7 @@ a {
 
     border-radius: 24px;
 
-    padding: 28px 24px;
+    padding: 10px 24px;
 
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -1668,6 +1668,35 @@ a {
 
 }
 
+.project-image-container {
+    position: relative;
+    min-height: 245px;
+    height: 245px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.04);
+}
+
+.project-image-container .art-tag {
+    z-index: 2;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(17, 30, 17, 0.85);
+}
+
+
 
 
 @media (prefers-reduced-motion: reduce) {
@@ -1692,7 +1721,7 @@ a {
 
 }
 
-/* Added contact message box only */
+
 .contact-form {
     width: min(100%, 680px);
     margin: 28px auto;
